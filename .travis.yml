@@ -1,6 +1,15 @@
 language: go
 after_script:
-  - echo GOROOT $GOROOT
-  - ls $GOROOT
-  - ls $GOROOT/bin
+  - ls
+  - ls $GOPATH
+  - ls $GOPATH/bin
+  - go build .
+  - ls
+  - ls $GOPATH
+  - ls $GOPATH/bin
+  - go build .
+  - go get .
+  - ls
+  - ls $GOPATH
+  - ls $GOPATH/bin
   - PATH=$GOROOT/bin:$PATH cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
