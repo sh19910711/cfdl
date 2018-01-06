@@ -3,12 +3,11 @@ after_script:
   - ls
   - ls $GOPATH
   - ls $GOPATH/bin
-  - go build .
+  - go build -v ./...
   - ls
   - ls $GOPATH
   - ls $GOPATH/bin
-  - go build .
-  - go get .
+  - go build -v ./...
   - ls
   - ls $GOPATH
   - ls $GOPATH/bin
