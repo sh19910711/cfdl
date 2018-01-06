@@ -1,4 +1,5 @@
 language: go
 after_script:
-  - tree $GOPATH
+  - echo PATH: $PATH
+  - ls $GOPATH/bin
   - cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
