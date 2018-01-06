@@ -1,0 +1,3 @@
+language: go
+test:
+  - go test -v
