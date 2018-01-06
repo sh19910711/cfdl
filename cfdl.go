@@ -1,4 +1,4 @@
-package main
+package cfdl
 
 import (
 	"flag"
@@ -8,9 +8,13 @@ import (
 	"strings"
 )
 
+func ExtractSourceCode(res *http.Response) string {
+  doc, _ := goquery.NewDocumentFromResponse(res)
+  return strings.Trim(doc.Find(".program-source").Text(), "\n")
+}
+
 func main() {
 	flag.Parse()
 	res, _ := http.Get(flag.Args()[0])
-	doc, _ := goquery.NewDocumentFromResponse(res)
-	fmt.Print(strings.Trim(doc.Find(".program-source").Text(), "\n"))
+	fmt.Print(ExtractSourceCode(res))
 }
