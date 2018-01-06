@@ -1,3 +1,4 @@
 language: go
 after_script:
+  - go get .
   - cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
