@@ -1,4 +1,3 @@
 language: go
 after_script:
-  - go install -v .
-  - cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
+  - go run cfdl.go http://codeforces.com/contest/912/submission/33932854 | grep bits
