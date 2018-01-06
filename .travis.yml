@@ -1,4 +1,3 @@
 language: go
 after_script:
-  - go build -i .
-  - cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
+  - PATH=$GOROOT/bin:$PATH cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
