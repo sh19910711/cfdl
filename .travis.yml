@@ -1,14 +1,4 @@
 language: go
 after_script:
-  - ls
-  - ls $GOPATH
-  - ls $GOPATH/bin
-  - go build -v ./...
-  - ls
-  - ls $GOPATH
-  - ls $GOPATH/bin
-  - go build -v ./...
-  - ls
-  - ls $GOPATH
-  - ls $GOPATH/bin
-  - PATH=$GOROOT/bin:$PATH cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
+  - go install -v .
+  - cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
