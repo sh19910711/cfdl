@@ -1,4 +1,4 @@
-package cfdl
+package main
 
 import (
 	"flag"

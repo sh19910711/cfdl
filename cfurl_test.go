@@ -1,11 +1,11 @@
-package cfdl_test
+package main_test
 
 import (
   "testing"
   "net/http"
   "io/ioutil"
   "strings"
-  "github.com/sh19910711/cfdl"
+  main "github.com/sh19910711/cfurl"
 )
 
 func TestExtractSourceCode(t *testing.T) {
@@ -19,7 +19,7 @@ Hello World
     Body: ioutil.NopCloser(strings.NewReader(input)),
   }
 
-  sc := cfdl.ExtractSourceCode(res)
+  sc := main.ExtractSourceCode(res)
   if sc != "Hello World" {
     t.Fail()
   }
