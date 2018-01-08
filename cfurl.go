@@ -23,7 +23,8 @@ func ExtractProblemInput(res *http.Response) string {
 	doc, _ := goquery.NewDocumentFromResponse(res)
 	return strings.Join(doc.Find(".sample-test .input pre").Map(
 		func(_ int, s *goquery.Selection) string {
-			return strings.Trim(s.Text(), "\n")
+			h, _ := s.Html()
+			return strings.Trim(strings.Replace(h, "<br/>", "\n", -1), "\n")
 		}), "\n")
 }
 
@@ -31,7 +32,8 @@ func ExtractProblemOutput(res *http.Response) string {
 	doc, _ := goquery.NewDocumentFromResponse(res)
 	return strings.Join(doc.Find(".sample-test .output pre").Map(
 		func(_ int, s *goquery.Selection) string {
-			return strings.Trim(s.Text(), "\n")
+			h, _ := s.Html()
+			return strings.Trim(strings.Replace(h, "<br/>", "\n", -1), "\n")
 		}), "\n")
 }
 
