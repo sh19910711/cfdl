@@ -9,11 +9,11 @@ $ cfurl http://codeforces.com/contest/912/submission/33932854 > source.code
 
 ### TODO
 
-- [ ] `cfurl http://codeforces.com/contest/912/problem/A`
+- [x] `cfurl http://codeforces.com/contest/912/problem/A`
 	- It should return the problem statement.
-- [ ] `cfurl --input http://codeforces.com/contest/912/problem/A`
+- [x] `cfurl --input http://codeforces.com/contest/912/problem/A`
 	- It should return the example inputs.
-- [ ] `cfurl --output http://codeforces.com/contest/912/problem/A`
+- [x] `cfurl --output http://codeforces.com/contest/912/problem/A`
 	- It should return the example outputs.
 - [x] `cfurl http://codeforces.com/contest/912/submission/33932854`
 	- It should return the source code of the submission.
