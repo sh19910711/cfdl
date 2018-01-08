@@ -1,5 +1,7 @@
 language: go
+script:
+  - make
+  - ls -lha
+  - go test -v .
 after_script:
-  - go build .
-  - go get .
-  - cfdl http://codeforces.com/contest/912/submission/33932854 | grep bits
+  - cfurl http://codeforces.com/contest/912/submission/33932854 | grep bits
