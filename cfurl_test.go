@@ -1,26 +1,26 @@
 package main_test
 
 import (
-  "testing"
-  "net/http"
-  "io/ioutil"
-  "strings"
-  main "github.com/sh19910711/cfurl"
+	main "github.com/sh19910711/cfurl"
+	"io/ioutil"
+	"net/http"
+	"strings"
+	"testing"
 )
 
 func TestExtractSourceCode(t *testing.T) {
-  input := `
+	input := `
 <pre class="program-source">
 Hello World
 </pre>
   `
-  res := &http.Response{
-    Request: &http.Request{},
-    Body: ioutil.NopCloser(strings.NewReader(input)),
-  }
+	res := &http.Response{
+		Request: &http.Request{},
+		Body:    ioutil.NopCloser(strings.NewReader(input)),
+	}
 
-  sc := main.ExtractSourceCode(res)
-  if sc != "Hello World" {
-    t.Fail()
-  }
+	sc := main.ExtractSourceCode(res)
+	if sc != "Hello World" {
+		t.Fail()
+	}
 }
