@@ -1,4 +1,5 @@
 build:
+	go get -v .
 	go build -i .
 
 docker/build:
