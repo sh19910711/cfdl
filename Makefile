@@ -1,3 +1,6 @@
+build:
+	go build -i .
+
 docker/build:
 	docker build -t cfurl-dev .
 

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sh19910711/cfdl.svg?branch=master)](https://travis-ci.org/sh19910711/cfdl)
+[![Build Status](https://travis-ci.org/sh19910711/cfurl.svg?branch=master)](https://travis-ci.org/sh19910711/cfurl)
 
 ### The CLI tool for transferring data from codeforces with URLs
 
